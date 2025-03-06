@@ -6,9 +6,9 @@ const Navigation = () => {
     return (
         <nav>
             <Menu>
-                <MenuItem><a href={'#'}>Item 1</a></MenuItem>
-                <MenuItem><a href={'#'}>Item 2</a></MenuItem>
-                <MenuItem><a href={'#'}>Item 3</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 1</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 2</a></MenuItem>
+                <MenuItem role={'menuitem'}><a href={'#'}>Item 3</a></MenuItem>
             </Menu>
         </nav>
     );
@@ -69,47 +69,54 @@ const Header = styled.div`
 `;
 
 const Menu = styled.ul`
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 `;
 
 const MenuItem = styled.li`
-  color: white;
-  font-weight: bold;
+    a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    list-style: none;
 `;
 
 const LoginBtn = styled.button`
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid;
-  border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
 `;
 
 const Block = styled.section`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const Form = styled.form`
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
 `;
 
 const Label = styled.label`
-  font-size: 1rem;
-  line-height: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
 `;
 
 const Field = styled.input`
-  padding: 5px 15px;
-  width: 100%;
-  font-size: 1rem;
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 1rem;
 `;
 
 
