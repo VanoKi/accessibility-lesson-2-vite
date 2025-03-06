@@ -19,7 +19,7 @@ function App() {
         <div className="App">
             <Header>
                 <Navigation/>
-                <LoginBtn>LOGIN</LoginBtn>
+                <LoginBtn aria-label='close'>X</LoginBtn>
             </Header>
             <Block>
                 <Title>Accessibility</Title>
