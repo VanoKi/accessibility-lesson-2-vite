@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <nav>
             <Menu>
-                <MenuItem role={'menuitem'}><a href={'#'}>Item 1</a></MenuItem>
+                <MenuItem role={'menuitem'}><a aria-hidden href={'#'}>Item 1</a></MenuItem>
                 <MenuItem role={'menuitem'}><a href={'#'}>Item 2</a></MenuItem>
                 <MenuItem role={'menuitem'}><a href={'#'}>Item 3</a></MenuItem>
             </Menu>
@@ -19,24 +19,24 @@ function App() {
         <div className="App">
             <Header>
                 <Navigation/>
-                <LoginBtn aria-label='close'>X</LoginBtn>
+                <LoginBtn aria-label='close' accessKey={'x'} >X</LoginBtn>
             </Header>
             <Block>
                 <Title>Accessibility</Title>
                 <Form>
                     <div>
                         <Label htmlFor="1">Label for field 1</Label>
-                        <Field id="1" placeholder="Field 1"/>
+                        <Field tabIndex={2} id="1" placeholder="Field 1"/>
                     </div>
 
                     <div>
                         <Label htmlFor="2">Label for field 2</Label>
-                        <Field id="2" placeholder="Field 2"/>
+                        <Field tabIndex={3} id="2" placeholder="Field 2"/>
                     </div>
 
                     <div>
                         <Label htmlFor="3">Label for field 3</Label>
-                        <Field id="3" placeholder="Field 3"/>
+                        <Field tabIndex={1} id="3" placeholder="Field 3"/>
                     </div>
                 </Form>
             </Block>
@@ -62,7 +62,7 @@ const Title = styled.h1`
 
 const Header = styled.div`
     height: 80px;
-    background-color: #e91e63;
+    background-color: #953052;
     display: flex;
     justify-content: space-around;
     align-items: center;
